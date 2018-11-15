@@ -33,8 +33,15 @@ public class Oval extends Shape
     {
         super(color, filled);
 
-        // TODO: complete implementation.
-    }
+        // Set the size of the point array to 1
+        location = new Point[1];
+        
+        // Assemble the 4 points
+        // int yDelta = diameter2 / 2;
+        //int xDelta = diameter1 / 2;
+        
+        location[0] = new Point(pointCenter.x, pointCenter.y);
+     }
 
     /**
      * Get the first diameter
