@@ -29,6 +29,14 @@ public class PolyLine extends Polygon
      */
     public PolyLine(Point pointUL, Point pointUR, int thickness, Color color, boolean filled)
     {
-        // TODO: implement this.
+    	super(color, filled);
+    	location = new Point[4];
+    	
+    	// Make the Points with the given thickness
+    	location[0] = new Point(pointUL.x, pointUL.y);
+    	location[1] = new Point(pointUR.x, pointUR.y);
+    	location[2] = new Point(pointUR.x, pointUR.y + thickness);
+    	location[3] = new Point(pointUL.x, pointUL.y + thickness); 
+    	
     }
 }
