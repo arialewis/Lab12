@@ -22,6 +22,18 @@ public class Rectangle extends Polygon
      */
     public Rectangle(Point center, int width, int height, Color color, boolean filled)
     {
-        // TODO: implement this.
+        super(color, filled);
+        
+        // Set the size of the point array to 4
+        location = new Point[4];
+        
+        // Assemble the 4 points
+        int yDelta = height / 2;
+        int xDelta = width / 2;
+        
+        location[0] = new Point(center.x + yDelta, center.y + xDelta);
+        location[1] = new Point(center.x + yDelta, center.y - xDelta);
+        location[2] = new Point(center.x - yDelta, center.y + xDelta);
+        location[3] = new Point(center.x - yDelta, center.y - xDelta);
     }
 }
