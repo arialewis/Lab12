@@ -36,35 +36,35 @@ public class DrawFrame extends JFrame
         // TODO: draw a dog:
         
         // Base head:
-        Circle circleOutline = new Circle(new Point(400, 300), 400, Color.BLACK, false);
-        Circle head = new Circle(new Point(215, 150), 375, Color.LIGHT_GRAY, true);
-        Circle nose = new Circle(new Point(215, 150), 50, Color.BLACK, true);
+        Circle circleOutline = new Circle(new Point(100, 25), 600, Color.BLACK, false);
+        Circle head = new Circle(new Point(215, 150), 375, Color.DARK_GRAY, true);
+        Circle nose = new Circle(new Point(380, 300), 50, Color.BLACK, true);
  
         // Ears:
-        RightTriangle insideEar1 = new RightTriangle(new Point(480, 270), 50, -100, Color.PINK, true);
-        RightTriangle insideEar2 = new RightTriangle(new Point(320, 270), -50, -100, Color.PINK, true);
-        RightTriangle earOutline1 = new RightTriangle(new Point(475, 270), 60, -110, Color.LIGHT_GRAY, true);
-        RightTriangle earOutline2 = new RightTriangle(new Point(325, 270), -60, -110, Color.LIGHT_GRAY, true);
+        RightTriangle insideEar1 = new RightTriangle(new Point(500, 270), 50, -100, Color.PINK, true);
+        RightTriangle insideEar2 = new RightTriangle(new Point(300, 270), -50, -100, Color.PINK, true);
+        RightTriangle earOutline1 = new RightTriangle(new Point(495, 270), 60, -110, Color.DARK_GRAY, true);
+        RightTriangle earOutline2 = new RightTriangle(new Point(305, 270), -60, -110, Color.DARK_GRAY, true);
 
         // Eyes:
-        Oval eye1 = new Oval(new Point(450,260), 150, 100, Color.WHITE, true);
-        Oval eye2 = new Oval(new Point(350,260), 150, 100, Color.WHITE, true);
-        Oval pupil1 = new Oval(new Point(450,260), 150, 100, Color.BLACK, true);
-        Oval pupil2 = new Oval(new Point(350,260), 140, 85, Color.BLACK, true);
+        Oval eye1 = new Oval(new Point(450,260), 50, 75, Color.WHITE, true);
+        Oval eye2 = new Oval(new Point(300,260), 50, 75, Color.WHITE, true);
+        Oval pupil1 = new Oval(new Point(450,260), 43, 70, Color.BLACK, true);
+        Oval pupil2 = new Oval(new Point(300,260), 43, 70, Color.BLACK, true);
 
         // Mouth:
-        PolyLine rightMouth = new PolyLine(new Point(400,375), new Point(500,365), 20, Color.BLACK, true);
-        PolyLine leftMouth = new PolyLine(new Point(300,365),new Point(400,375), 20, Color.BLACK, true);
+        PolyLine rightMouth = new PolyLine(new Point(400,375), new Point(500,365), 60, Color.BLACK, true);
+        PolyLine leftMouth = new PolyLine(new Point(300,365),new Point(400,375), 60, Color.BLACK, true);
        
         // Tongue:
-        Oval tongue = new Oval(new Point(410,360), 150, 100, Color.PINK, true);
+        Oval tongue = new Oval(new Point(410, 400), 50, 75, Color.PINK, true);
             
         // Collar:
-        Oval collar = new Oval(new Point(210,500), 400, 50, Color.BLUE, true);
+        Oval collar = new Oval(new Point(215,500), 400, 50, Color.BLUE, true);
        
         // Collar tag:
-        Circle outsideTag = new Circle(new Point(100,375), 150, Color.RED, true);
-        Circle insideTag = new Circle(new Point(100,375), 140, Color.GREEN, false);
+        Circle outsideTag = new Circle(new Point(350,475), 100, Color.RED, true);
+        Circle insideTag = new Circle(new Point(360,485), 80, Color.GREEN, false);
         
         // Square around the dog:
         Square squareOutline = new Square(new Point(400, 300), 500, Color.MAGENTA, false);
@@ -95,7 +95,7 @@ public class DrawFrame extends JFrame
 
         
         // set background color
-        drawPanel.setBackground(Color.YELLOW);
+        drawPanel.setBackground(Color.CYAN);
         
         // add panel to frame
         this.add(drawPanel);
