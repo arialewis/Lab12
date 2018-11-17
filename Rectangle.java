@@ -33,7 +33,7 @@ public class Rectangle extends Polygon
         
         location[0] = new Point(center.x + yDelta, center.y + xDelta);
         location[1] = new Point(center.x + yDelta, center.y - xDelta);
-        location[2] = new Point(center.x - yDelta, center.y + xDelta);
-        location[3] = new Point(center.x - yDelta, center.y - xDelta);
+        location[2] = new Point(center.x - yDelta, center.y - xDelta);
+        location[3] = new Point(center.x - yDelta, center.y + xDelta);
     }
 }

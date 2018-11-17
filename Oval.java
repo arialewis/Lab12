@@ -36,11 +36,10 @@ public class Oval extends Shape
         // Set the size of the point array to 1
         location = new Point[1];
         
-        // Assemble the 4 points
-        // int yDelta = diameter2 / 2;
-        //int xDelta = diameter1 / 2;
-        
+        // Assemble the 1 points
         location[0] = new Point(pointCenter.x, pointCenter.y);
+        this.diameter1 = diameter1;
+        this.diameter2 = diameter2;
      }
 
     /**
@@ -74,12 +73,22 @@ public class Oval extends Shape
      * bounding box given the center point that you should have stored.
      * 
      * @param graphics A Graphics object for drawing the shape
-     */
+     */  
     @Override
     public void draw(Graphics graphics)
     {
+        
+        // Set the color
         graphics.setColor(this.getColor());
         
-        // TODO: define how to draw an oval. Remember that the point stored is the center point.
+        // Render depending on whether it is filled or not.
+        if (this.isFilled())
+        {
+            graphics.fillOval(location[0].x, location[0].y, diameter1, diameter2);
+        } 
+        else
+        {
+            graphics.drawOval(location[0].x, location[0].y, diameter1, diameter2);
+        }
     }
 }
