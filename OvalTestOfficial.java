@@ -7,8 +7,8 @@ import org.junit.Test;
 /**
  * Test cases for the Oval and the Circle
  * 
- * @author Stephen
- * @version 2018-04-02
+ * @author Aria Lewis
+ * @version 2018-11-17
  * Lab 11
  */
 public class OvalTestOfficial
@@ -62,5 +62,43 @@ public class OvalTestOfficial
         Assert.assertEquals("Incorrect diameter2 for the Circle", 75, c2.getDiameter2());
     }
     
-    // TODO: test color and fill in constructor.
+    /**
+     * Unfilled case
+     */
+    @Test
+    public void testOvalConstructorUnfilled()
+    {
+        Assert.assertFalse("Oval fill incorrect.", o2.isFilled());
+        Assert.assertFalse("Oval fill incorrect.", c2.isFilled());
+        
+    }
+    
+    /**
+     * Filled case
+     */
+    @Test
+    public void testOvalConstructorFilled()
+    {
+        Assert.assertTrue("Oval fill incorrect.", o1.isFilled());
+        Assert.assertTrue("Oval fill incorrect.", c1.isFilled());
+
+    }
+    
+    /**
+     * Color
+     */
+    @Test
+    public void testOvalConstructorColor()
+    {
+        Color clr1 = o1.getColor();
+        Color clr2 = o2.getColor();
+        Color clr11 = c1.getColor();
+        Color clr22 = c2.getColor();
+ 
+        Assert.assertEquals("Oval color incorrect.", Color.BLACK, clr1);
+        Assert.assertEquals("Oval color incorrect.", Color.CYAN, clr2);
+        Assert.assertEquals("Oval color incorrect.", Color.BLUE, clr11);
+        Assert.assertEquals("Oval color incorrect.", Color.RED, clr22);
+
+    }   
 }

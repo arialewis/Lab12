@@ -28,12 +28,12 @@ public class Rectangle extends Polygon
         location = new Point[4];
         
         // Assemble the 4 points
-        int yDelta = height / 2;
         int xDelta = width / 2;
+        int yDelta = height / 2;
         
-        location[0] = new Point(center.x + yDelta, center.y + xDelta);
-        location[1] = new Point(center.x + yDelta, center.y - xDelta);
-        location[2] = new Point(center.x - yDelta, center.y - xDelta);
-        location[3] = new Point(center.x - yDelta, center.y + xDelta);
+        location[0] = new Point(center.x + xDelta, center.y + yDelta);
+        location[1] = new Point(center.x + xDelta, center.y - yDelta);
+        location[2] = new Point(center.x - xDelta, center.y - yDelta);
+        location[3] = new Point(center.x - xDelta, center.y + yDelta);
     }
 }
